@@ -4,7 +4,7 @@ Este es mi portafolio personal como desarrollador Full Stack, diseñado y desarr
 
 ## 🚀 Tecnologías utilizadas
 
-- * Next.js 15.2.4** (App Router)
+- **Next.js 15.2.4** (App Router)
 - **Tailwind CSS**
 - **ShadCN/UI**
 - **Framer Motion**
