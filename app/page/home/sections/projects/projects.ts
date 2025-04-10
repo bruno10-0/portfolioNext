@@ -8,7 +8,7 @@ export const projects = [
   {
     title: 'Bloomi',
     description: 'Esta plataforma permite a los mentores conectar con mentees de diferentes áreas de conocimientos y habilidades.',
-    image: 'https://portfolio-skuu.onrender.com/assets/logoBloomi-XoyNGYdW.jpg',
+    image: 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1744215705/imgPortfolio/le0nozkqh0dklncxi2lo.png',
     href: '/projects/portfolio',
   },
   {

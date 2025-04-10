@@ -23,7 +23,7 @@ const CardProject = ({ title, description, image, href = '/' }: ProjectProps) =>
                     />
                 </div>
                 <CardHeader className="pb-2">
-                    <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
+                    <h3 className="text-xl font-semibold tracking-tight text-primary">{title}</h3>
                 </CardHeader>
                 <CardContent className="flex flex-col justify-between grow">
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-4">

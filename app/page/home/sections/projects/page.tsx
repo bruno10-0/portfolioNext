@@ -1,6 +1,6 @@
 "use client"
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, FolderKanban } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { projects } from './projects'
 import CardProject from './cardProject'
@@ -44,14 +44,15 @@ const Projects = () => {
 
     return (
         <Card className="h-full rounded-2xl hover:shadow-md transition-all relative">
-            <CardHeader>
-                <CardTitle className="text-sm text-primary">Proyectos</CardTitle>
+            <CardHeader className="flex flex-row items-center gap-2">
+                <FolderKanban className="w-4 h-4 text-primary" />
+                <CardTitle className="text-sm text-primary">Los destacados</CardTitle>
             </CardHeader>
             <CardContent className="relative">
                 {canScrollLeft && (
                     <button
                         onClick={() => scroll('left')}
-                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md z-10 p-1"
+                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-white/10 rounded-full shadow-md z-10 p-1"
                     >
                         <ChevronLeft className="text-primary" />
                     </button>
@@ -69,7 +70,7 @@ const Projects = () => {
                 {canScrollRight && (
                     <button
                         onClick={() => scroll('right')}
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md z-10 p-1"
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-white/10 rounded-full shadow-md z-10 p-1"
                     >
                         <ChevronRight className="text-primary" />
                     </button>

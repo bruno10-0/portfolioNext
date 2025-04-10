@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -17,9 +18,12 @@ const CopyEmail = () => {
     return (
         <Card className="h-full rounded-2xl hover:shadow-md transition-all">
             <CardHeader>
-                <CardTitle className="text-sm text-primary">Contacto</CardTitle>
+                <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-primary" />
+                    <CardTitle className="text-sm text-primary">Contacto</CardTitle>
+                </div>
             </CardHeader>
-            <CardContent className="flex items-center justify-center">
+            <CardContent className="flex flex-col items-center justify-center gap-4">
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger asChild>
@@ -37,6 +41,9 @@ const CopyEmail = () => {
                         </TooltipContent>
                     </Tooltip>
                 </TooltipProvider>
+                <p className="text-xs text-muted-foreground text-center">
+                    Copiá mi correo para contactarme rápidamente.
+                </p>
             </CardContent>
         </Card>
     )

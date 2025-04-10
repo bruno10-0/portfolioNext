@@ -15,6 +15,7 @@ import News from "./sections/news/page"
 import LinkedIn from "./sections/linkedIn/page"
 import Mission from "./sections/mission/page"
 import AnimatedSection from "@/components/AnimatedSection"
+import Languages from "./sections/languages/page"
 
 const Home = () => {
     const sections = [
@@ -27,6 +28,7 @@ const Home = () => {
         { component: <BackendStack /> },
         { component: <GithubRepo /> },
         { component: <CopyEmail /> },
+        { component: <Languages /> },
         { component: <Experience />, className: "col-span-1 md:col-span-2" },
         { component: <Projects />, className: "col-span-1 md:col-span-2 lg:col-span-2" },
         { component: <Cv /> },
@@ -36,7 +38,7 @@ const Home = () => {
     ]
     return (
         <main className="container mx-auto px-4 py-8 md:py-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4  bg-transparent">
                 {sections.map((section, index) => (
                     <AnimatedSection
                         key={index}
