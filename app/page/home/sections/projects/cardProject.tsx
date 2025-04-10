@@ -7,10 +7,10 @@ type ProjectProps = {
     title: string
     description: string
     image: string
-    href?: string
+    id: number
 }
 
-const CardProject = ({ title, description, image, href = '/' }: ProjectProps) => {
+const CardProject = ({ title, description, image, id }: ProjectProps) => {
     return (
         <div className="min-w-[300px] max-w-[90vw] sm:min-w-[350px]">
             <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full">
@@ -27,9 +27,9 @@ const CardProject = ({ title, description, image, href = '/' }: ProjectProps) =>
                 </CardHeader>
                 <CardContent className="flex flex-col justify-between grow">
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                    {description}
+                        {description}
                     </p>
-                    <Link href={href} className="self-start">
+                    <Link href={"/proyecto/" + id} className="self-start">
                         <button className="px-4 py-1 text-sm font-medium bg-primary text-white rounded-md hover:bg-primary/90 transition">
                             Ver detalles
                         </button>

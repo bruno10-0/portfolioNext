@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ChevronLeft, ChevronRight, FolderKanban } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { projects } from './projects'
+import { projects } from '../../../../utils/proyectos/projects'
 import CardProject from './cardProject'
 
 const Projects = () => {
