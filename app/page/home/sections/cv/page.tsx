@@ -11,7 +11,7 @@ const Cv = () => {
                 <CardTitle className="text-sm text-primary">Resumen</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center gap-4">
-                <a href="/public/Cv Bruno.pdf" download className="w-full">
+                <a href="/Cv Bruno.pdf" download className="w-full">
                     <Button variant="outline" className="w-full text-primary">
                         <Download className="mr-2 h-4 w-4 text-primary" />
                         Descargar CV
