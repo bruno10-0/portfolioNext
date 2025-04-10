@@ -11,20 +11,33 @@ import { Separator } from "@/components/ui/separator"
 import RelatedProjects from "../sections/related/page"
 import { projects } from "@/app/utils/proyectos/projects"
 import { Project } from "@/app/utils/proyectos/types"
-export default function ProjectPage() {
+import NotFoundProject from "../sections/notFound/page"
+import LoadingProject from "@/components/LoadingProject"
 
+export default function ProjectPage() {
   const params = useParams()
   const [project, setProject] = useState<Project | null>(null)
-  const relatedProjects = projects.filter(p => p.id !== project?.id)
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     if (params?.id) {
       const found = projects.find(p => p.id.toString() === params.id)
       setProject(found ?? null)
+      setIsLoading(false)
     }
   }, [params])
 
+  const relatedProjects = projects.filter(p => p.id !== project?.id)
 
-  if (!project) return <p className="text-center mt-20">Cargando proyecto...</p>
+  if (isLoading) {
+    return <LoadingProject />
+  }
+
+  if (!project) {
+    return (
+      <NotFoundProject />
+    )
+  }
 
   return (
     <main className="container mx-auto px-4 md:px-10 py-8">
@@ -64,7 +77,6 @@ export default function ProjectPage() {
             )}
           </div>
 
-
           <div className="mt-6 flex flex-wrap gap-2">
             {project.tecnology?.map((tech) => (
               <Badge key={tech} variant="secondary">
@@ -103,6 +115,6 @@ export default function ProjectPage() {
 
       {/* Related Projects Section */}
       <RelatedProjects projects={relatedProjects} />
-    </main>
+      </main>
   )
 }

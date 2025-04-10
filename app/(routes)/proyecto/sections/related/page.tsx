@@ -14,6 +14,10 @@ interface RelatedProjectsProps {
 export default function RelatedProjects({ projects }: RelatedProjectsProps) {
     const scrollRef = useRef<HTMLDivElement>(null)
 
+    if (!projects || projects.length === 0) {
+        return null // o un mensaje si querés mostrar algo al usuario
+    }
+
     const scroll = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
             const scrollAmount = 340 // ajustá según el ancho de tus tarjetas
