@@ -17,7 +17,7 @@ Fue construida utilizando tecnologías modernas del ecosistema JavaScript como R
     date: 'Enero 2023',
     tecnology: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel', 'MercadoPago'],
     github: 'https://github.com/bruno10-0/queenF',
-    liveUrl: 'https://kera-two.vercel.app/',
+    liveUrl: 'https://queenscloset.vercel.app/',
   },
   {
     id: 2,
